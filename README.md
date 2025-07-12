@@ -42,9 +42,8 @@ Y por ultimo acerca de mí.
  Cambio de contraseña para el usuario si lo necesita
 
 
-Y por ultimo  un video explicativo, de como se usa mi blog de libros.
+Y por ultimo  un video explicativo, de como se usa mi blog de libros y se muestran las siguientes cosas:
 - Navegación entre vistas (Home, About, Posts)
 - Registro, login y perfil del usuario
 - CRUD de páginas (crear, editar, borrar)
 - Sistema de mensajería entre usuarios
-- Panel de administración
