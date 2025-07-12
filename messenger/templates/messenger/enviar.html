@@ -1,0 +1,21 @@
+    {% extends 'base.html' %}
+    {% block content %}
+    <section class="message-form">
+    <h2>Enviar un mensaje</h2>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.help_text %}<small class="help-text">{{ field.help_text }}</small>{% endif %}
+            {% for error in field.errors %}
+            <div class="error">{{ error }}</div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+    <a class="btn-link" href="{% url 'inbox' %}">← Volver a la bandeja</a>
+    </section>
+    {% endblock %}

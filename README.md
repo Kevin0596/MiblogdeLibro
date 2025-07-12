@@ -26,3 +26,25 @@ python manage.py runserver
  Agregar categoría: `/categoria/`
  Agregar post: `/post/`
  Buscar post: `/buscar/`
+ Dejar mensaje: `/mensajes/` 
+ ( Mensajes
+Bandeja de entrada: /mensajes/
+Enviar mensaje: /mensajes/enviar/
+solo usuarios registrados pueden usar esta función)
+Y por ultimo acerca de mí.
+
+ # Usuarios
+ Registro de usuario: /signup/
+ Login: /login/
+ Logout: /logout/
+ Vista de perfil con: nombre, apellido, email, avatar, biografía, cumpleaños
+ Edición de perfil: /profile/edit/
+ Cambio de contraseña para el usuario si lo necesita
+
+
+Y por ultimo  un video explicativo, de como se usa mi blog de libros.
+- Navegación entre vistas (Home, About, Posts)
+- Registro, login y perfil del usuario
+- CRUD de páginas (crear, editar, borrar)
+- Sistema de mensajería entre usuarios
+- Panel de administración

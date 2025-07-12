@@ -36,3 +36,8 @@ def buscar_post(request):
     else:
         form = BusquedaForm()
     return render(request, "blog/buscar.html", {'form': form, 'resultados': resultados})
+
+from django.shortcuts import render
+
+def about_view(request):
+    return render(request, 'blog/about.html')

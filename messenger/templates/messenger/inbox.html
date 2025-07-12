@@ -1,0 +1,22 @@
+    {% extends 'base.html' %}
+    {% block content %}
+    <section class="inbox">
+        <h2>Bandeja de Entrada</h2>
+        {% if mensajes %}
+        <ul class="mensajes-lista">
+            {% for mensaje in mensajes %}
+            <li class="mensaje-item">
+                <div class="mensaje-header">
+                <strong>{{ mensaje.emisor.username }}</strong>
+                <span class="mensaje-fecha">{{ mensaje.fecha|date:"d/m/Y H:i" }}</span>
+                </div>
+                <p class="mensaje-contenido">{{ mensaje.contenido }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="sin-mensajes">No tenés mensajes todavía.</p>
+        {% endif %}
+        <a class="btn btn-primary" href="{% url 'enviar_mensaje' %}">Enviar mensaje</a>
+    </section>
+    {% endblock %}

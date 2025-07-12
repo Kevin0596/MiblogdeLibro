@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <link rel="icon" href="{% static 'blog/img/descargar.png' %}">
+    <title>{% block title %}Mi Blog{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Mi Blog</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Inicio</a> |
+        <a href="{% url 'agregar_autor' %}">Nuevo Autor</a> |
+        <a href="{% url 'agregar_categoria' %}">Nueva Categoría</a> |
+        <a href="{% url 'agregar_post' %}">Nuevo Post</a> |
+        <a href="{% url 'buscar_post' %}">Buscar</a> |
+        <a href="{% url 'about' %}">Acerca de mí</a> |
+        <a href="{% url 'inbox' %}">Mensajes</a> |
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'profile' %}">Mi perfil</a> |
+            <a href="{% url 'login' %}">Iniciar sesión</a> |
+            <a href="{% url 'signup' %}">Registrarse</a>
+            <form method="post" action="{% url 'logout' %}" style="display:inline">
+{% csrf_token %}
+<button type="submit">Cerrar sesión</button>
+</form>
+        {% endif %}
+    </nav>
+
+    <hr>
+
+    <div class="hero-section container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer class= "libro">
+        © 2025 - Blog de Libros 
+    </footer>
+</body>
+</html>
+
+

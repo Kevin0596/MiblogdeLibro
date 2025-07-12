@@ -1,0 +1,16 @@
+# Base de datos
+db.sqlite3
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+*.log
+
+# Entorno virtual (si está en el proyecto)
+env/
+
+# Archivos subidos por usuarios
+media/
+
+# Archivos de configuración local
+.vscode/

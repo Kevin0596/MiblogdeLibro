@@ -1,6 +1,11 @@
-{% extends "blog/base.html" %}
+{% extends 'base.html' %}
 {% block title %}Inicio{% endblock %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
 {% block content %}
-<h2 class="titulo">Bienvenido a mi Blog de libros.</h2>
-<p class="frase">"Descubre mundos nuevos con cada página."</p>
+<div class="bienvenida">
+    <h2 class="titulo">Bienvenido a mi Blog de libros.</h2>
+
+    <p class="frase">"Descubre mundos nuevos con cada página."</p>
+</div>
 {% endblock %}

@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-test-key'
@@ -14,6 +15,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'messenger',
+    'accounts.apps.AccountsConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -31,7 +35,7 @@ ROOT_URLCONF = 'TuPrimeraPaginaRomero.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -44,6 +48,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'TuPrimeraPaginaRomero.wsgi.application'
 
 DATABASES = {
@@ -53,6 +58,10 @@ DATABASES = {
     }
 }
 
+LOGIN_URL = '/accounts/login/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 AUTH_PASSWORD_VALIDATORS = []
 LANGUAGE_CODE = 'es-ar'
 TIME_ZONE = 'America/Argentina/Buenos_Aires'
@@ -60,5 +69,5 @@ USE_I18N = True
 USE_TZ = True
 STATIC_URL = 'static/'
 import os 
-STATICFILES_DIRE = [ os.path.join(BASE_DIR,'static'),]
+STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static'),]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
