@@ -41,6 +41,9 @@ Y por ultimo acerca de mí.
  Edición de perfil: /profile/edit/
  Cambio de contraseña para el usuario si lo necesita
 
+ # Video tutorial de mi pagina de blog
+https://drive.google.com/file/d/1E1JcLvsk0_t9crhYHrv0N8LGoxbhZmPe/view?usp=sharing
+
 
 Y por ultimo  un video explicativo, de como se usa mi blog de libros y se muestran las siguientes cosas:
 - Navegación entre vistas (Home, About, Posts)
